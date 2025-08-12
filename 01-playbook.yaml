@@ -1,9 +1,10 @@
 - name: play1
   hosts: all
+  var: URL
   tasks:
     - name: Printing hai from task1 of play1
       ansible.builtin.debug:
         msg: "hai from task1 of play1"
-    - name: Printing hai from task2 of play1  
+    - name: Printing variable from task2 of play1  
       ansible.builtin.debug:
-        msg: "hai from devopsadmin of play1"
+        msg: "Value of variable is {{URL}}"
