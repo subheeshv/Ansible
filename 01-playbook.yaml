@@ -1,6 +1,10 @@
 - name: play1
   hosts: all
-  var: URL
+  vars: 
+   URL: play.google.com
+  vars_prompt:
+    - name: URLNAME
+      promt: Enter your name
   tasks:
     - name: Printing hai from task1 of play1
       ansible.builtin.debug:
@@ -8,3 +12,6 @@
     - name: Printing variable value from task2 of play1  
       ansible.builtin.debug:
         msg: "Value of variable is {{URL}}"
+    - name: printing prompt variable
+      ansible.builtin.debug:
+        msg: "Value of the person is {{URLNAME}}"
