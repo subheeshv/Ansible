@@ -3,7 +3,7 @@
   vars:
    URL: play.google.com
   vars_prompt:
-   - Name: URLNAME
+   - name: URNAME
      promt: Enter your name
   tasks:
    - name: Printing the variable
@@ -14,6 +14,6 @@
         msg: value of the URL is {{URL}}
      vars:
         URL: task.google.com
-        
+
 
 
