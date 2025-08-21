@@ -1,0 +1,19 @@
+- Name: demo om var usage
+  hosts: all
+  vars:
+   URL: play.google.com
+  vars_prompt:
+   - Name: URLNAME
+     promt: Enter your name
+  tasks:
+   - name: Printing the variable
+     ansible.builtin.debug:
+        msg: Value of the URL is {{URL}}
+   - name: demo of using local variable
+     ansible.builtin.debug:
+        msg: value of the URL is {{URL}}
+     vars:
+        URL: task.google.com
+        
+
+
