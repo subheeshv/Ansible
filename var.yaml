@@ -14,6 +14,10 @@
         msg: value of the URL is {{URL}}
      vars:
         URL: task.google.com
+   - name: demo of using variable prompt
+     ansible.builtin.debug:
+        msg: Name of the person is {{URNAME}}
+
 
 
 
