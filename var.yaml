@@ -1,4 +1,4 @@
-- Name: demo om var usage
+- name: demo om var usage
   hosts: all
   vars:
    URL: play.google.com
