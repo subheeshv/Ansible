@@ -2,6 +2,8 @@
   hosts: all
   vars:
    URL: play.google.com
+  vars_files:
+   - dev.yaml
   vars_prompt:
    - name: URNAME
      prompt: Enter your name
@@ -18,6 +20,9 @@
    - name: demo of using variable prompt
      ansible.builtin.debug:
         msg: Name of the person is {{URNAME}}
+   - name: This is instance specific
+     ansible.builtin.debug:
+        msg: Type of instance name to be used {{INST_TYPE}}
 
 
 
