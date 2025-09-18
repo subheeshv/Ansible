@@ -10,7 +10,6 @@
         msg: "{{result.stdout}}"
 
     - name: declaring the variable
-      ansible.builtin.set_fact:
       set_fact:
         EXITCODE: "{{result.rc}}"
 
