@@ -1,10 +1,10 @@
 - name: demo on shell
   hosts: all
   tasks:
-    - name: Running the date command
-      ansible.builtin.shell: date
+    - name: Running the uptime
+      ansible.builtin.shell: uptime
       register: result
 
-    - name: Printing the date
+    - name: Printing the uptime 
       ansible.builtin.debug:
-        msg: {{result}}
+        msg: "{{result}}"
