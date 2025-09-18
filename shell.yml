@@ -1,0 +1,10 @@
+- name: demo on shell
+  hosts: all
+  tasks:
+    - name: Running the date command
+      ansible.builtin.shell: date
+      register: result
+
+    -  name: Printing the date
+      ansible.builtin.debug:
+        msg: {{result}}
