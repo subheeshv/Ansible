@@ -4,7 +4,7 @@
     - name: checking tomcat is running or not
       ansible.builtin.shell: pd -ef | grep java | grep -v grep
       register: result
-      #ignore_errors: yes
+      ignore_errors: yes
   
     - name: starting tomcat service
       ansible.builtin.debug:
