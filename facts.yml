@@ -4,3 +4,6 @@
    - name: Printing the default variable
      ansible.builtin.debug:
         msg: Server flavour is {{ansible_distribution}}
+   - name: Printing the mac address
+     ansible.bulletin.debug:
+        msg: Mac address of the node is {{ansible_default_ipv4.macaddress}}
